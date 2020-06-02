@@ -1,0 +1,51 @@
+import 'react-native-gesture-handler';
+import React, { useState } from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack';
+
+import { View, Text, SafeAreaView, Button, TouchableOpacity, TextInput } from 'react-native'
+import HomeScreen from './Page/Home/Index';
+
+
+const Stack = createStackNavigator();
+
+function App() {
+
+    // const [text, setText] = useState('');
+    // var inputChange = function (yazi) {
+    //     setText(yazi);
+    // }
+
+    return (
+        <NavigationContainer>
+            {/* <SafeAreaView> */}
+            {/* <Text>deneme</Text> */}
+            <Stack.Navigator>
+                <Stack.Screen name="Home" component={HomeScreen} />
+            </Stack.Navigator>
+
+
+            {/* <Text>Merhaba</Text>
+                <Text>Dünya</Text>
+                <Button
+                    onPress={() => { alert("test") }}
+                    title="Buton bu" />
+
+                <TouchableOpacity
+                    onPress={() => alert("tpouclb button")}>
+                    <Text>Tocleb opacity button</Text>
+                </TouchableOpacity>
+
+                <TextInput
+                    placeholder="isim yazınız" onChangeText={inputChange}
+                    keyboardType="phone-pad"
+                ></TextInput>
+                <Text>{text}</Text> */}
+
+            {/* </SafeAreaView> */}
+        </NavigationContainer>
+
+    )
+}
+
+export default App;
